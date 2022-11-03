@@ -11,8 +11,9 @@ fn main() {
     println!("The value of x is: {y}");
     // constant
     const _MAX_POINTS: u32 = 100_000;
+
+    // shadowing
     fn shadowing_ex() {
-        // shadowing
         let z = 5;
         let z = z + 1;
         let z = z * 2;
@@ -24,8 +25,8 @@ fn main() {
     }
     shadowing_ex();
 
+    // data types
     fn ex_data_types() {
-        // data types
         let guess: u32 = "42".parse().expect("Not a number!");
         println!("The value of guess is: {guess}");
         // floating point types
@@ -103,8 +104,8 @@ fn main() {
     fn plus_one(x: i32) -> i32 {
         x + 1
     }
+    // if expressions
     fn ex_control_flow() {
-        // if expressions
         let number = 3;
         if number < 5 {
             println!("condition was true");
@@ -114,8 +115,8 @@ fn main() {
     }
     ex_control_flow();
 
+    // if expressions with else if
     fn ex_control_flow_else_if() {
-        // if expressions with else if
         let number = 6;
         if number % 4 == 0 {
             println!("number is divisible by 4");
@@ -129,24 +130,24 @@ fn main() {
     }
     ex_control_flow_else_if();
 
+    // if expressions with if in a let statement
     fn ex_if_in_let_statement() {
-        // if expressions with if in a let statement
         let condition = true;
         let number = if condition { 5 } else { 6 };
         println!("The value of number is: {number}");
     }
     ex_if_in_let_statement();
 
+    // loop
     fn ex_loop() {
-        // loop
         loop {
             println!("again!");
             break;
         }
     }
     ex_loop();
+    // loop with break
     fn ex_loop_with_break() {
-        // loop with break
         let mut counter = 0;
         let result = loop {
             counter += 1;
@@ -158,8 +159,8 @@ fn main() {
     }
     ex_loop_with_break();
 
+    // while
     fn ex_while() {
-        // while
         let mut number = 3;
         while number != 0 {
             println!("{}!", number);
@@ -169,8 +170,8 @@ fn main() {
     }
     ex_while();
 
+    // for
     fn ex_for() {
-        // for
         let a = [10, 20, 30, 40, 50];
         for element in a.iter() {
             println!("the value is: {}", element);
